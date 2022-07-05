@@ -1,0 +1,50 @@
+@use 'srv'
+
+.p-footer
+    padding: 51px 0 59px
+    background-color: #F9F9F9
+    &__wrapper
+        max-width: 1150px
+        margin: 0 auto
+        @include srv.flexbox(space-between)
+    &__line
+        display: none
+@media (max-width: 1250px)
+    .p-footer
+        &__wrapper
+            margin: 0 50px
+@media (max-width: 700px)
+    .p-footer
+        padding: 30px 0
+        &__wrapper
+            flex-direction:  column
+            row-gap: 26px
+            margin: 0
+        &__line
+            display: block
+            background-color: rgba(0, 0, 0, 0.1)
+            width: 260px
+            height: 1px
+
+.social
+    @include srv.flexbox(center)
+    gap: 41px
+    &__link
+        font-size: 0
+    &__svg
+        width: 29px
+        height: 29px
+    &__use
+
+.tribute
+    @include srv.flexbox(center)
+    &__text
+        font-size: 19px
+        font-weight: 700
+        margin-right: 35px
+    &__logo
+        width: 27px
+        height: 34px
+    &__use
+        stroke: #63d1bb
+        fill: #63d1bb

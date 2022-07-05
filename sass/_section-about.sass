@@ -1,0 +1,25 @@
+@use 'srv'
+
+.about
+    &__wrapper
+        max-width: 700px
+        padding: 70px 0 89px
+        margin: 0 auto
+    &__inner
+        margin-top: 43px
+        @include srv.flexbox(space-between)
+
+    &__container
+        flex: 0 0 42%
+        @include srv.flexbox(center)
+        flex-direction: column
+        row-gap: 60px
+
+.card
+    &__pic
+        max-width: 55px
+        max-height: 38px
+    &__title
+        margin-top: 20px
+        font-size: 20px
+        font-weight: 700

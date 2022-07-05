@@ -1,0 +1,50 @@
+@use 'srv'
+
+.weekly
+    background-color: white
+    &__wrapper
+        position: relative
+        max-width: 1150px
+        margin: 0 auto
+        padding: 54px 0 96px
+    &__header
+        @include srv.flexbox(flex-start)
+        position: absolute
+        top: 117px
+        left: 100px
+    &__marker
+        margin-right: 58px
+        text-align: center
+        width: 70px
+        font-size: 17px
+        line-height: 17px
+        font-weight: 700
+        text-transform: uppercase
+        color: #63d1bb
+        order: -1
+    &__container
+
+    &__divider
+        position: absolute
+        bottom: 0
+
+.product
+    @include srv.flexbox(center)
+    color: #444444
+    font-weight: 400
+    &_pic
+        flex: 0 0 49%
+        font-size: 0
+    &__block
+        margin: 183px 6% 0 20%
+        flex: 0 0 25%
+    &__desc
+    &__tech
+        margin: 66px 0 120px
+        & td
+            padding: 10px 30px 10px 0
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+            font-size: 15px
+    &__price
+        margin-bottom: 34px
+        text-align: center

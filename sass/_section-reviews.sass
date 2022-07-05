@@ -1,0 +1,38 @@
+@use 'srv'
+
+.reviews
+    background-color: white
+    &__wrapper
+        position: relative
+        max-width: 1150px
+        margin: 0 auto
+        background: no-repeat url('../src/rev_bg.jpg') 0 0 / 350px 457px
+        padding: 0 0 90px
+    &__content
+        padding: 73px 0 100px
+        margin-left: 20%
+    &__title
+        @include srv.flexbox(space-between)
+    &__text
+        margin: 54px 0 29px
+    &__bottom
+        @include srv.flexbox(space-between)
+    &__contact
+        font-size: 17px
+    &__name
+        font-weight: 700
+        margin-bottom: 5px
+    &__link
+        font-weight: 400
+        color: #444444
+    &__arrows
+
+    &__divider
+        position: absolute
+        bottom: 0
+
+.arrow
+
+    &_left
+
+    &_right

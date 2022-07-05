@@ -1,0 +1,103 @@
+@use 'srv'
+
+.nav
+    &__wrapper
+        position: relative
+        padding: 0 15px
+    &__sub 
+        position: absolute
+        top: 112px
+        left: 15px
+
+.menu
+    @include srv.flexbox(center)
+    &__item
+        &:not(:first-of-type)
+            border-left: 1px solid rgba(0, 0, 0, 0.1)
+    &__link
+        display: block
+        padding: 32px 35px
+        white-space: nowrap
+        &_cart
+            display: flex
+            gap: 30px
+    &__label
+        line-height: 0
+    &__input
+        display: none
+
+    &__placeholder
+        width: 100%
+
+    &__icon
+        width: 21px
+        height: 21px
+    &__use
+
+    &_hasBurger
+
+@media (max-width: 1150px) and (min-width: 768px)
+    .menu
+        &__link
+            padding: 32px calc(21px + (35 - 21) * ((100vw - 768px) / (1150 - 768)))
+    
+
+.sub-menu
+    font-size: 15px
+    &__item
+        padding: 25px 30px
+        &_tablet
+            display: none
+        &_desc
+
+.burger
+    display: none
+
+    &__button
+
+    &__line
+
+    &__toggler
+
+.p-header
+    font-size: 17px
+    font-weight: 700
+    &__wrapper
+        height: 88px
+        max-width: 1150px
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1)
+        margin: 0 auto
+        @include srv.flexbox(center)
+        position: relative
+        z-index: 1
+    &__shipment
+        position: absolute
+        bottom: -45px
+        right: 50px
+        font-size: 15px
+        font-weight: 400
+    &__nav
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+//     &__desc-menu, &__utils-menu
+//         position: absolute
+//         top: 0
+//     &__desc-menu
+//         left: 15px
+//     &__utils-menu
+//         right: 15px
+
+// .menu
+//     @include srv.flexbox(flex-start)
+//     &__item
+//         height: 88px
+//         @include srv.flexbox(center)
+//         &_mob
+//             display: none
+//     &__link
+//         display: inline-block
+//         padding: 32px 35px
+//     &_under
+//         font-size: 15px
