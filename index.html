@@ -123,7 +123,15 @@
                         <h3 class="product__price price">Цена: 990 руб.</h3>
                         <button class="button button_w100">заказать</button>
                     </div>
-                    <picture class="product_pic"></picture>
+                    <picture class="product_pic">
+                        <source type="image/webp" media="(min-width: 768px)"
+                                srcset="src\pic\daily_525x636.webp">
+                        <source  media="(min-width: 320px)"
+                                srcset="src\pic\daily_333x404.webp">
+                        <source  media="(max-width: 320px)"
+                                srcset="src\pic\daily_260x315.webp">
+                        <img src="src/pic/daily_260x315.png">
+                    </picture>
                 </div>
                 <div class="weekly__divider curv"></div>
             </div>
