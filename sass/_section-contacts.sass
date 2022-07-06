@@ -2,7 +2,6 @@
 
 .contacts
     padding: 71px 0 105px
-    position: relative
     &__wrapper
         max-width: 1150px
         margin: 0 auto
@@ -11,12 +10,15 @@
     &__container
         margin-left: 20%
         padding: 81px 0 0
+        position: relative
     &__flag
         position: absolute
         width: 47px
         height: 81px
-        top: 133px
-        left: -64px
+        top: 68px
+        left: -92px
+        & > use
+            fill:#63d1bb
     &__list
         @include srv.flexbox(center, flex-start)
         flex-direction: column

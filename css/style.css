@@ -382,6 +382,9 @@ a {
   max-width: 55px;
   max-height: 38px;
 }
+.card__pic > use {
+  fill: #63d1bb;
+}
 .card__title {
   margin-top: 20px;
   font-size: 20px;
@@ -445,7 +448,6 @@ a {
 
 .contacts {
   padding: 71px 0 105px;
-  position: relative;
 }
 .contacts__wrapper {
   max-width: 1150px;
@@ -464,13 +466,17 @@ a {
 .contacts__container {
   margin-left: 20%;
   padding: 81px 0 0;
+  position: relative;
 }
 .contacts__flag {
   position: absolute;
   width: 47px;
   height: 81px;
-  top: 133px;
-  left: -64px;
+  top: 68px;
+  left: -92px;
+}
+.contacts__flag > use {
+  fill: #63d1bb;
 }
 .contacts__list {
   display: -webkit-box;
