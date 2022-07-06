@@ -208,21 +208,26 @@
                     <svg class="contacts__flag">
                         <use></use>
                     </svg>
-                    <table class="contancts__table">
-                        <tr>
-                            <td>email:</td>
-                            <td>info@mimimishkashop.ru</td>
-                        </tr>
-                        <tr>
-                            <td>адрес:</td>
-                            <td>г. Санкт-Петербург,
-                                ул. Большая Конюшенная, 
-                                д. 19/8, офис 101</td>
-                        </tr>
-                    </table>
-                    <button class="button">напишите нам</button>
+                    <div class="contacts__list">
+                        <div class="contact">
+                            <p class="contact__text">email:</p>
+                            <a href="email:info@mimimishkashop.ru" class="contact__text contact__text_brd-btm">info@mimimishkashop.ru</a>
+                        </div>
+                        <div class="contact">
+                            <p class="contact__text">адрес:</p>
+                            <p href="email:info@mimimishkashop.ru" class="contact__text">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</p>
+                        </div>
+                    </div>
+                    <button class="button button__cnt-desc">напишите нам</button>
                 </div>
-                <div class="contacts__map"></div>
+                <div class="contacts__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1333.9052567186745!2d30.321682968346252!3d59.93878498748291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0x2893b192d28304c7!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCA40Y7RiNC10L3QvdCw0Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sde!4v1657131979854!5m2!1sru!2sde"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <button class="button button__cnt-mob">напишите нам</button>
             </div>
         </section>
     </main>

@@ -2,6 +2,54 @@
 
 .contacts
     padding: 71px 0 105px
+    position: relative
     &__wrapper
         max-width: 1150px
         margin: 0 auto
+        @include srv.flexbox(center, flex-start)
+        gap: 61px 53px
+    &__container
+        margin-left: 20%
+        padding: 81px 0 0
+    &__flag
+        position: absolute
+        width: 47px
+        height: 81px
+        top: 133px
+        left: -64px
+    &__list
+        @include srv.flexbox(center, flex-start)
+        flex-direction: column
+        margin: 54px 0 74px
+        gap: 21px
+    &__map
+        font-size: 0
+    &__map > iframe
+        width: 525px
+        height: 457px
+
+.contact
+    @include srv.flexbox(center, flex-start)
+    gap: 26px
+    &__text
+        font-size: 17px
+        line-height: 30px
+        font-weight: 400
+        color: #444444
+        &_brd-btm
+            border-bottom: solid 1px #444444
+            
+
+.button
+    &__cnt-mob
+        display: none
+
+@media screen and ( max-width: 768px )
+    .contacts
+        &__map > iframe
+            width: 100%
+    .button
+        &__cnt-mob
+            display: block
+        &__cnt-desc
+            display: none
