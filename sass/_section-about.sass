@@ -8,10 +8,11 @@
     &__inner
         margin-top: 43px
         @include srv.flexbox(space-between)
+        gap: 60px 10px
 
     &__container
-        flex: 0 0 42%
-        @include srv.flexbox(center)
+        flex: 0 0 294px
+        @include srv.flexbox(center, flex-start)
         flex-direction: column
         row-gap: 60px
 
@@ -22,6 +23,20 @@
         & > use
             fill: #63d1bb
     &__title
+        max-width: 294px
         margin-top: 20px
         font-size: 20px
         font-weight: 700
+
+@media screen and ( max-width: 816px )
+    .about
+        &__wrapper
+            max-width: 816px
+            padding: 70px calc(29px + (58 - 29) * ((100vw - 650px) / (816 - 650))) 89px
+
+@media screen and ( max-width: 650px )
+    .about
+        &__wrapper
+            padding: 70px 29px 89px
+        &__inner
+            flex-direction: column

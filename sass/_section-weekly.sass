@@ -13,7 +13,7 @@
         top: 117px
         left: 100px
     &__marker
-        margin-right: 58px
+        margin: 0 58px 0 0
         text-align: center
         width: 70px
         font-size: 17px
@@ -27,17 +27,19 @@
     &__divider
         position: absolute
         bottom: 0
+        left: 0
 
 .product
-    @include srv.flexbox(center, flex-start)
+    @include srv.flexbox(space-between, flex-start)
     color: #444444
     font-weight: 400
-    &_pic
-        flex: 0 0 49%
+    gap: 44px
+    &__pic
+        flex: 0 1 525px
         font-size: 0
     &__block
-        margin: 163px 6% 0 20%
-        flex: 0 0 25%
+        margin: 163px 0 0 20%
+        flex: 0 0 282px
     &__desc
     &__tech
         margin: 49px 0 90px
@@ -48,3 +50,45 @@
     &__price
         margin-bottom: 29px
         text-align: center
+
+@media screen and ( max-width: 1150px )
+    .product
+        &__block
+            margin: 163px 0 0 calc(100px + (230 - 100) * ((100vw - 1000px) / (1250 - 1000)))
+
+@media screen and ( max-width: 1000px )
+    .weekly
+        &__header
+            left: calc(100px + (230 - 100) * ((100vw - 1000px) / (1250 - 1000)))
+    
+@media screen and ( max-width: 895px )
+    .weekly
+        &__container
+            padding: 55px 0 0
+        &__header
+            position: static
+            margin: 0 auto
+            justify-content: space-between
+            padding: 0 max(50px, calc(50px + (100 - 50) * ((100vw - 768px) / (895 - 768))))
+        &__marker
+            order: 0
+            margin: 0
+    .product
+        padding-right: max(50px, calc(50px + (100 - 50) * ((100vw - 768px) / (895 - 768))))
+        &__block
+            margin: 0 0 0 max(50px, calc(50px + (100 - 50) * ((100vw - 768px) / (895 - 768))))
+        &__pic
+            flex: 0 0 333px
+        &__tech
+            margin: 29px 0 42px
+
+@media screen and ( max-width: 710px )
+    .weekly
+        &__header
+            flex-direction: column
+            align-items: flex-start
+        &__marker
+            width: 100%
+            text-align: left
+        &__container
+            flex-direction: column

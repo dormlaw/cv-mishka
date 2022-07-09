@@ -7,10 +7,11 @@
         max-width: 1150px
         margin: 0 auto
         background: no-repeat url('../src/rev_bg.jpg') 0 0 / 350px 457px
-        padding: 0 0 90px
+        padding: 0 0 90px 0
     &__content
         padding: 73px 0 100px
         margin-left: 20%
+        padding-right: 50px
     &__title
         @include srv.flexbox(space-between)
     &__text
@@ -26,13 +27,88 @@
         font-weight: 400
         color: #444444
     &__arrows
-
+        @include srv.flexbox(center)
+        gap: 37px
+        padding-right: 19px
     &__divider
         position: absolute
         bottom: 0
+        max-width: 1150px
 
 .arrow
-
+    @include srv.flexbox(center)
+    width: 49px
+    height: 5px
+    background-color: white
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        border-bottom: 5px solid black
+        width: 49px
+        top: 0
+    &::after
+        position: absolute
+        top: -9px
+        content: ""
+        border: solid black
+        border-width: 0 5px 5px 0
+        display: inline-block
+        padding: 9px
     &_left
-
+        &::after 
+            transform: rotate(135deg)
+            left: 0
     &_right
+        &::after
+            transform: rotate(-45deg)
+            right: 0
+
+.reviews__btn
+    &_desc
+    &_mob
+        display: none
+
+@media screen and ( max-width: 1150px )
+    .reviews
+        &__content
+            margin-left: max(calc(29px + (50 - 29) * ((100vw - 320px) / (768 - 320))), calc(50px + (230 - 50) * ((100vw - 768px) / (1150 - 768))))
+
+@media screen and ( max-width: 600px )
+    .reviews
+        &__wrapper
+            background: none
+        &__content
+            padding-right: calc(29px + (50 - 29) * ((100vw - 320px) / (768 - 320)))
+        &__text
+            margin: 40px 0 40px
+        &__bottom
+            flex-direction: column
+            align-items: flex-start
+            row-gap: 36px
+            // max-width: 360px
+            margin: 0 auto
+        &__arrows
+            padding-right: 0
+            gap: 0
+            width: 100%
+    .arrow
+        padding: 25px 25%
+        border: 1px solid #ececec
+        box-sizing: content-box
+        &::before
+            top: 25px
+        &::after
+            top: 16px
+        &_left
+            &::after
+                left: calc(50% - 24px)
+        &_right
+            &::after
+                right: calc(50% - 24px)
+    .reviews__btn
+        &_desc
+            display: none
+        &_mob
+            display: block
+            width: 100%
