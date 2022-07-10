@@ -1,0 +1,86 @@
+@use 'srv'
+    
+.products
+    &__wrapper
+        max-width: 1150px
+        margin: 0 auto
+        padding: 111px 0 50px
+        @include srv.flexbox(space-evenly)
+.product-card
+    @include srv.flexbox(center)
+    flex-direction: column
+    border: 1px solid #ececec
+    max-width: 316px
+    cursor: pointer
+    &__pic
+        width: 316px
+        height: 462px
+    &__desc
+        @include srv.flexbox(space-between, flex-start)
+        flex-direction: column
+        padding: 29px
+        width: 100%
+        height: 200px
+    &__name
+    
+    &__title
+    &:hover &__title
+        color: rgba(0, 0, 0, 0.6)
+    &:focus &__title
+        color: rgba(0, 0, 0, 0.3)
+    &__to-cart
+        @include srv.flexbox(space-between)
+        width: 100%
+        padding: 23px 0 0
+        border-top: 1px solid #ececec
+    &__price
+        font-size: 17px
+        font-weight: 700
+    &__cart
+        width: 21px
+        height: 18px
+        fill: rgba(0, 0, 0, 0.2)
+    &:hover &__cart
+        fill: #63d1bb
+    &:focus &__cart
+        fill: rgba(99, 209, 187, 0.3)
+    &:hover
+        box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1)
+    &:focus
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1)
+
+@media screen and ( max-width: 1000px )
+    .products
+        &__wrapper
+            padding: 67px 0 50px
+            flex-direction: column
+            gap: 54px
+    .product-card
+        flex-direction: row
+        max-width: 668px
+        &__pic
+            width: 334px
+            height: 334px
+            flex-shrink: 0
+        &__desc
+            width: 334px
+            height: 334px
+
+@media screen and ( max-width: 700px )
+    .products
+        &__wrapper
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: flex-start
+            padding: 67px 30px 50px
+    .product-card
+        flex-direction: column
+        max-width: 668px
+        &__pic
+            width: 260px
+            height: 196px
+            flex-shrink: 0
+        &__desc
+            // flex: 0 0 260px
+            width: 260px
+            height: 180px
