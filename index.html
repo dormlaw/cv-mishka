@@ -12,11 +12,17 @@
 <body class="page">
     <header class="p-header">
         <div class="p-header__wrapper">
-            <svg class="logo">
-                <use class="logo__use logo_desc" xlink:href="src/logo.svg#logo-desc"></use>
-                <use class="logo__use logo_tablet" xlink:href="src/logo.svg#logo-tablet"></use>
-                <use class="logo__use logo_mob" xlink:href="src/logo.svg#logo-mob"></use>
-            </svg>
+            <a href="#" class="logo">
+                <svg class="logo__svg logo_desc">
+                    <use class="logo__use" xlink:href="src/logo.svg#logo-desc"></use>
+                </svg>
+                <svg class="logo__svg logo_tablet">
+                    <use class="logo__use" xlink:href="src/logo.svg#logo-tablet"></use>
+                </svg>
+                <svg class="logo__svg logo_mob">
+                    <use class="logo__use" xlink:href="src/logo.svg#logo-mob"></use>
+                </svg>
+            </a>
             <nav class="nav p-header__nav">
                 <div class="nav__wrapper">
                     <ul class="menu">
@@ -225,7 +231,7 @@
                     <div class="contacts__list">
                         <div class="contact">
                             <p class="contact__text">email:</p>
-                            <a href="email:info@mimimishkashop.ru" class="contact__text contact__text_brd-btm">info@mimimishkashop.ru</a>
+                            <a href="email:info@mimimishkashop.ru" class="e-mail contact__text contact__text_brd-btm">info@mimimishkashop.ru</a>
                         </div>
                         <div class="contact">
                             <p class="contact__text">адрес:</p>
@@ -247,9 +253,11 @@
     </main>
     <footer class="p-footer">
         <div class="p-footer__wrapper">
-            <svg class="logo logo_footer">
-                <use class="logo__use" xlink:href="src/logo.svg#logo-mob"></use>
-            </svg>
+            <a href="#" class="logo logo_footer">
+                <svg class="logo__svg">
+                    <use class="logo__use" xlink:href="src/logo.svg#logo-mob"></use>
+                </svg>
+            </a>
             <div class="social">
                 <a href="" class="social__link">
                     <svg class="social__svg">
@@ -268,12 +276,12 @@
                 </a>
             </div>
             <div class="p-footer__line"></div>
-            <div class="tribute">
+            <a href="#" class="tribute">
                 <p class="tribute__text">Разработано</p>
                 <svg class="tribute__logo">
                     <use class="tribute__use" xlink:href="src/sprite.svg#htmlA"></use>
                 </svg>
-            </div>
+            </a>
         </div>
     </footer>
 

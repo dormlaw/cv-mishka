@@ -41,24 +41,31 @@
         display: block
         padding: 32px 35px
         white-space: nowrap
+        cursor: pointer
+        & > svg
+            fill: rgba(35, 31, 32, 0.2)
         &_cart
             display: flex
             gap: 30px
+        &:hover
+            color: rgba(0, 0, 0, 0.6)
+        &:focus
+            color: rgba(0, 0, 0, 0.3)
+        &:hover > svg
+            fill: #63d1bb
+        &:focus > svg
+            fill: rgb(99, 209, 187, 0.3)
     &__label
         line-height: 0
     &__input
         display: none
-
     &__placeholder
         width: 100%
-
     &__icon
         width: 21px
         height: 21px
     &__use
-
     &_hasBurger
-    
 
 .sub-menu
     font-size: 15px
@@ -67,6 +74,11 @@
         &_tablet
             display: none
         &_desc
+        &:hover
+            color: rgba(0, 0, 0, 0.6) 
+        &:focus
+            color: rgba(0, 0, 0, 0.3)
+            
 
 .burger
     display: none

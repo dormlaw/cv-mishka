@@ -44,9 +44,13 @@
     &::before
         content: ""
         position: absolute
-        border-bottom: 5px solid black
+        border-bottom: 5px solid #000000
         width: 49px
         top: 0
+    &:hover::before
+        border-bottom: 5px solid rgba(0, 0, 0, 0.6)
+    &:focus::before
+        border-bottom: 5px solid rgba(0, 0, 0, 0.3)
     &::after
         position: absolute
         top: -9px
@@ -55,6 +59,10 @@
         border-width: 0 5px 5px 0
         display: inline-block
         padding: 9px
+    &:hover::after
+        border-color: rgba(0, 0, 0, 0.6)
+    &:focus::after
+        border-color: rgba(0, 0, 0, 0.3)
     &_left
         &::after 
             transform: rotate(135deg)
