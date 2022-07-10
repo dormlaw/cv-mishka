@@ -377,7 +377,7 @@ a {
   position: relative;
 }
 .promo_index {
-  background: no-repeat url("../src/promo_bg.jpg") center/1150px 746px;
+  background: no-repeat #F9F9F9 url("../src/promo_bg.jpg") center/1150px 746px;
 }
 .promo__wrapper {
   max-width: 1150px;
