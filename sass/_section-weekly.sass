@@ -33,10 +33,13 @@
     @include srv.flexbox(space-between, flex-start)
     color: #444444
     font-weight: 400
-    gap: 44px
+    gap: 24px
     &__pic
         flex: 0 1 525px
         font-size: 0
+        &_add
+            display: none
+        &_main
     &__block
         margin: 163px 0 0 20%
         flex: 0 0 282px
@@ -82,7 +85,7 @@
         &__tech
             margin: 29px 0 42px
 
-@media screen and ( max-width: 710px )
+@media screen and ( max-width: 740px )
     .weekly
         &__header
             flex-direction: column
@@ -91,4 +94,23 @@
             width: 100%
             text-align: left
         &__container
+            padding: 0 30px
+        &__header
+            padding: 0 30px
+        
+    .product
+        flex-direction: column
+        &__pic
+            max-width: 333px
+            &_main
+                display: none
+            &_add
+                display: block
+        &__price
+            margin-top: 29px
+        &__block
+            margin: 0
+            @include srv.flexbox(center)
             flex-direction: column
+        &__desc
+            margin-top: 30px

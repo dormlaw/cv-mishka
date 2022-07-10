@@ -13,9 +13,9 @@
     <header class="p-header">
         <div class="p-header__wrapper">
             <svg class="logo">
-                <use class="logo__use logo__desc" xlink:href="src/logo.svg#logo-desc"></use>
-                <use class="logo__use logo__tablet" xlink:href="src/logo.svg#logo-tablet"></use>
-                <use class="logo__use logo__mob" xlink:href="src/logo.svg#logo-mob"></use>
+                <use class="logo__use logo_desc" xlink:href="src/logo.svg#logo-desc"></use>
+                <use class="logo__use logo_tablet" xlink:href="src/logo.svg#logo-tablet"></use>
+                <use class="logo__use logo_mob" xlink:href="src/logo.svg#logo-mob"></use>
             </svg>
             <nav class="nav p-header__nav">
                 <div class="nav__wrapper">
@@ -45,10 +45,10 @@
                         <a href="" class="sub-menu__item sub-menu__item_desc">Распродажа</a>
                     </div>
                     <div class="burger">
-                        <label for="" class="burger__button">
+                        <label for="nav-menu-checkbox" class="burger__button">
                             <span class="burger__line"></span>
                         </label>
-                        <input type="checkbox" class="burger__toggler">
+                        <input type="checkbox" class="burger__toggler" id="nav-menu-checkbox">
                         <ul class="menu menu_hasBurger">
                             <li class="menu__item"><a href="" class="menu__link">Каталог товаров</a></li>
                             <li class="menu__item"><a href="" class="menu__link">Вязание на заказ</a></li>
@@ -77,7 +77,7 @@
     <main class="p-main">
         <section class="promo">
             <div class="promo__wrapper">
-                <h2 class="promo__title title">Милые штуки ручной<br>работы для дома</h2>
+                <h2 class="promo__title title title_larger">Милые штуки ручной<br>работы для дома</h2>
                 <div class="promo__categories">
                     <a href="" class="categorie categorie_left">
                         <p class="categorie__title">Предметы<br>интерьера</p>
@@ -120,16 +120,21 @@
                                 <td>15 см</td>
                             </tr>
                         </table>
+                        <picture class="product__pic product__pic_add">
+                            <source  type="image/webp" media="(min-width: 400px)"
+                                    srcset="src\pic\daily_333x404.webp">
+                            <source  type="image/webp" media="(max-width: 320px)"
+                                    srcset="src\pic\daily_260x315.webp">
+                            <img src="src/pic/daily_260x315.png">
+                        </picture>
                         <h3 class="product__price price">Цена: 990 руб.</h3>
                         <button class="button button_w100">заказать</button>
                     </div>
-                    <picture class="product__pic">
+                    <picture class="product__pic product__pic_main">
                         <source type="image/webp" media="(min-width: 895px)"
                                 srcset="src\pic\daily_525x636.webp">
-                        <source  media="(min-width: 320px)"
+                        <source  type="image/webp" media="(min-width: 320px)"
                                 srcset="src\pic\daily_333x404.webp">
-                        <source  media="(max-width: 320px)"
-                                srcset="src\pic\daily_260x315.webp">
                         <img src="src/pic/daily_260x315.png">
                     </picture>
                 </div>
