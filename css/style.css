@@ -373,19 +373,25 @@ a {
   }
 }
 .promo {
-  background: no-repeat #F9F9F9 url("../src/promo_bg.jpg") center/1150px 746px;
+  background-color: #F9F9F9;
   position: relative;
+}
+.promo_index {
+  background: no-repeat url("../src/promo_bg.jpg") center/1150px 746px;
 }
 .promo__wrapper {
   max-width: 1150px;
   margin: 0 auto;
+  padding: 105px 0 115px;
+}
+.promo__wrapper_index {
   padding: 161px 0 0;
 }
 .promo__title {
-  margin-bottom: 371px;
   text-align: center;
 }
 .promo__categories {
+  margin-top: 371px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
