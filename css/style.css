@@ -116,12 +116,16 @@ a {
     line-height: 30px;
   }
 }
-.text {
+.text, .desc-text {
   font-size: 17px;
   line-height: 30px;
   font-weight: 400;
   color: #444444;
   max-width: 771px;
+}
+
+.desc-text {
+  font-size: 15px;
 }
 
 .button {
@@ -174,6 +178,11 @@ a {
   font-weight: 700;
 }
 
+@media screen and (max-width: 700px) {
+  .naming {
+    font-size: 17px;
+  }
+}
 .p-header {
   font-size: 17px;
   font-weight: 700;
@@ -463,10 +472,13 @@ a {
   }
 }
 @media screen and (max-width: 600px) {
-  .promo {
+  .promo_index {
     background: no-repeat #F9F9F9 url("../src/promo-bg_mob.jpg") top/320px 373px;
   }
   .promo__wrapper {
+    padding: 74px 0 74px;
+  }
+  .promo__wrapper_index {
     padding: 76px 0 0;
   }
   .promo__categories {
@@ -483,6 +495,8 @@ a {
   }
   .promo__title {
     padding: 0 38px;
+  }
+  .promo__title_index {
     margin-bottom: 120px;
   }
   .categorie {
@@ -1201,15 +1215,9 @@ a {
 }
 @media screen and (max-width: 700px) {
   .products__wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 260px);
+    gap: 30px;
     padding: 67px 30px 50px;
   }
   .product-card {
@@ -1229,6 +1237,63 @@ a {
     width: 260px;
     height: 180px;
   }
+  .product-card__text {
+    font-size: 13px;
+  }
+  .product-card__price {
+    font-size: 15px;
+  }
+}
+.video__wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 5px 0 105px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.video__playbtn {
+  width: 101px;
+  height: 78px;
+  position: absolute;
+  background-color: green;
+  top: 189px;
+  left: 341px;
+}
+.video__pic {
+  font-size: 0;
+}
+.video__desc {
+  border: 1px solid #ececec;
+  max-width: 368px;
+  height: 455px;
+  padding: 47px 57px 60px 78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.video__cam {
+  width: 32px;
+  height: 22px;
+  margin-bottom: 25px;
+  background-color: green;
 }
 .p-footer {
   padding: 51px 0 59px;

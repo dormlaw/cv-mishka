@@ -1,0 +1,37 @@
+@use 'srv'
+
+.video
+
+    &__wrapper
+        max-width: 1150px
+        margin: 0 auto
+        padding: 5px 0 105px
+        position: relative
+        @include srv.flexbox(center)
+    &__playbtn
+        width: 101px
+        height: 78px
+        position: absolute
+        background-color: green
+        top: 189px
+        left: 341px
+        // transform: translate(-50%)
+    &__pic
+        font-size: 0
+    &__desc
+        border: 1px solid #ececec
+        max-width: 368px
+        height: 455px
+        padding: 47px 57px 60px 78px
+        @include srv.flexbox(space-between)
+        flex-direction: column
+    &__title
+
+    &__cam
+        width: 32px
+        height: 22px
+        margin-bottom: 25px
+        background-color: green
+    &__text
+
+

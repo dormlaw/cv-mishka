@@ -56,9 +56,12 @@
 
 @media screen and ( max-width: 600px )
     .promo
-        background: no-repeat #F9F9F9 url('../src/promo-bg_mob.jpg') top / 320px 373px
+        &_index
+            background: no-repeat #F9F9F9 url('../src/promo-bg_mob.jpg') top / 320px 373px
         &__wrapper
-            padding: 76px 0 0
+            padding: 74px 0 74px
+            &_index
+                padding: 76px 0 0
         &__categories
             flex-direction: column
         &__divider
@@ -67,7 +70,8 @@
             margin: 0
         &__title
             padding: 0 38px
-            margin-bottom: 120px
+            &_index
+                margin-bottom: 120px
     .categorie
         width: 100%
         padding: 30px

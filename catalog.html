@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="page">
     <header class="p-header">
         <div class="p-header__wrapper">
@@ -89,12 +91,15 @@
             <div class="products__wrapper">
                 <a href="#" class="product-card">
                     <picture class="product-card__pic">
-                        
+                        <source type="image/webp" media="(min-width: 1000px)" srcset="src/pic/bunny_316.webp">
+                        <source type="image/webp" media="(min-width: 700px)" srcset="src/pic/bunny_334.webp">
+                        <source type="image/webp" media="(min-width: 300px)" srcset="src/pic/bunny_196.webp">
+                        <img src="src/pic/bunny_316.png">
                     </picture>
                     <div class="product-card__desc">
                         <div class="product-card__name">
                             <h2 class="product-card__title naming">Зайчик-попрыгайчик</h2>
-                            <p class="product-card__text text">Диаметр 30 см, высота 30 см</p>
+                            <p class="product-card__text desc-text">Диаметр 30 см, высота 30 см</p>
                         </div>
                         <div class="product-card__to-cart">
                             <div class="product-card__price">1 200 руб.</div>
@@ -106,12 +111,15 @@
                 </a>
                 <a href="#" class="product-card">
                     <picture class="product-card__pic">
-
+                        <source type="image/webp" media="(min-width: 1000px)" srcset="src/pic/shovel_316.webp">
+                        <source type="image/webp" media="(min-width: 700px)" srcset="src/pic/shovel_334.webp">
+                        <source type="image/webp" media="(min-width: 300px)" srcset="src/pic/shovel_196.webp">
+                        <img src="src/pic/shovel_316.png">
                     </picture>
                     <div class="product-card__desc">
                         <div class="product-card__name">
                             <h2 class="product-card__title naming">Корзинка для белья</h2>
-                            <p class="product-card__text text">Диаметр 30 см, высота 30 см</p>
+                            <p class="product-card__text desc-text">Диаметр 30 см, высота 30 см</p>
                         </div>
                         <div class="product-card__to-cart">
                             <div class="product-card__price">690 руб.</div>
@@ -123,12 +131,15 @@
                 </a>
                 <a href="#" class="product-card">
                     <picture class="product-card__pic">
-
+                        <source type="image/webp" media="(min-width: 1000px)" srcset="src/pic/basket_316.webp">
+                        <source type="image/webp" media="(min-width: 700px)" srcset="src/pic/basket_334.webp">
+                        <source type="image/webp" media="(min-width: 300px)" srcset="src/pic/basket_196.webp">
+                        <img src="src/pic/basket_316.png">
                     </picture>
                     <div class="product-card__desc">
                         <div class="product-card__name">
                             <h2 class="product-card__title naming">Большая корзинка для игрушек</h2>
-                            <p class="product-card__text text">Диаметр 30 см, высота 30 см</p>
+                            <p class="product-card__text desc-text">Диаметр 30 см, высота 30 см</p>
                         </div>
                         <div class="product-card__to-cart">
                             <div class="product-card__price">1 500 руб.</div>
@@ -141,7 +152,30 @@
             </div>
         </section>
         <section class="video">
+            <div class="video__wrapper">
+                <svg class="video__playbtn">
 
+                </svg>
+                <picture class="video__pic">
+                    <source type="image/webp" media="(min-width: 1000px)" srcset="src/pic/video_682.webp">
+                    <source type="image/webp" media="(min-width: 700px)" srcset="src/pic/video_525.webp">
+                    <source type="image/webp" media="(min-width: 300px)" srcset="src/pic/video_197.webp">
+                    <img src="src/pic/video_682.png">
+                </picture>
+                <div class="video__desc">
+                    <div class="video__title">
+                        <svg class="video__cam">
+
+                        </svg>
+                        <h2 class="naming">Процесс производства</h2>
+                    </div>
+                    <p class="video__text desc-text">
+                        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши
+                        товары.
+                    </p>
+                    <button class="button button_w100">Сделать заказ</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="p-footer">
@@ -178,4 +212,5 @@
         </div>
     </footer>
 </body>
+
 </html>
