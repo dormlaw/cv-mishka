@@ -1251,8 +1251,7 @@ a {
 }
 .video__wrapper {
   max-width: 1050px;
-  margin: 0 auto;
-  padding: 5px 0 105px;
+  margin: 5px auto 105px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1262,6 +1261,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.video__wrapper:hover {
+  -webkit-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.video__wrapper:focus {
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .video__playbtn {
   width: 101px;
@@ -1273,6 +1280,20 @@ a {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   fill: #63d1bb;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.video__playbtn:hover {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+      -ms-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}
+.video__playbtn:focus {
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+      -ms-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0.3;
 }
 .video__pic {
   font-size: 0;
@@ -1323,8 +1344,7 @@ a {
 }
 @media screen and (max-width: 1122px) {
   .video__wrapper {
-    max-width: 1122px;
-    padding: 5px calc(17px + 19 * (100vw - 1000px) / 122) 105px;
+    margin: 5px calc(17px + 19 * (100vw - 1000px) / 122) 105px;
   }
   .video__desc {
     padding: 47px calc(23px + 34 * (100vw - 1000px) / 122) 60px calc(30px + 48 * (100vw - 1000px) / 122);
@@ -1332,12 +1352,12 @@ a {
 }
 @media screen and (max-width: 999px) {
   .video__wrapper {
+    margin: 5px auto 58px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 702px;
-    padding: 5px 17px 105px;
+    max-width: 668px;
   }
   .video__desc {
     max-width: 668px;
@@ -1364,7 +1384,16 @@ a {
     width: 100%;
   }
 }
+@media screen and (max-width: 702px) {
+  .video__wrapper {
+    margin: 5px 17px 58px;
+  }
+}
 @media screen and (max-width: 439px) {
+  .video__wrapper {
+    max-width: 260px;
+    margin: 5px auto 58px;
+  }
   .video__desc {
     max-width: 260px;
     padding: 34px;

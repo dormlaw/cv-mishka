@@ -3,9 +3,12 @@
 .video
     &__wrapper
         max-width: 1050px
-        margin: 0 auto
-        padding: 5px 0 105px
+        margin: 5px auto 105px
         @include srv.flexbox(center)
+        &:hover
+            box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1)
+        &:focus
+            box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1)
     &__playbtn
         width: 101px
         height: 78px
@@ -14,6 +17,12 @@
         left: 50%
         transform: translate(-50%, -50%)
         fill: #63d1bb
+        transition: 0.2s ease-in-out
+        &:hover
+            transform: translate(-50%, -50%) scale(1.2)
+        &:focus
+            transform: translate(-50%, -50%) scale(0.8)
+            opacity: 0.3
     &__pic
         font-size: 0
         position: relative
@@ -39,17 +48,16 @@
 @media screen and ( max-width: 1122px )
     .video
         &__wrapper
-            max-width: 1122px
-            padding: 5px calc(17px + (36 - 17) * ((100vw - 1000px) / (1122 - 1000))) 105px
+            margin: 5px calc(17px + (36 - 17) * ((100vw - 1000px) / (1122 - 1000))) 105px
         &__desc
             padding: 47px calc(23px + (57 - 23) * ((100vw - 1000px) / (1122 - 1000))) 60px calc(30px + (78 - 30) * ((100vw - 1000px) / (1122 - 1000)))
 
 @media screen and ( max-width: 999px )
     .video
         &__wrapper
+            margin: 5px auto 58px
             flex-direction: column
-            max-width: 702px
-            padding: 5px 17px 105px
+            max-width: 668px
         &__desc
             max-width: 668px
             padding: 42px
@@ -64,9 +72,17 @@
         &__pic > img
             width: 100%
 
+@media screen and ( max-width: 702px )
+    .video
+        &__wrapper
+            margin: 5px 17px 58px
+    
+
 @media screen and ( max-width: 439px )
     .video
         &__wrapper
+            max-width: 260px
+            margin: 5px auto 58px
         &__desc
             max-width: 260px
             padding: 34px
