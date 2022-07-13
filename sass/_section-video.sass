@@ -1,23 +1,27 @@
 @use 'srv'
 
 .video
-
     &__wrapper
-        max-width: 1150px
+        max-width: 1050px
         margin: 0 auto
         padding: 5px 0 105px
-        position: relative
         @include srv.flexbox(center)
     &__playbtn
         width: 101px
         height: 78px
         position: absolute
-        background-color: green
-        top: 189px
-        left: 341px
-        // transform: translate(-50%)
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        fill: #63d1bb
     &__pic
         font-size: 0
+        position: relative
+    &__title
+        @include srv.flexbox(flex-start,flex-start)
+        flex-direction: column
+        &_mob
+            display: none
     &__desc
         border: 1px solid #ececec
         max-width: 368px
@@ -25,13 +29,60 @@
         padding: 47px 57px 60px 78px
         @include srv.flexbox(space-between)
         flex-direction: column
-    &__title
-
     &__cam
+        fill: #63d1bb
         width: 32px
         height: 22px
-        margin-bottom: 25px
-        background-color: green
+        margin: 0 0 25px
     &__text
+
+@media screen and ( max-width: 1122px )
+    .video
+        &__wrapper
+            max-width: 1122px
+            padding: 5px calc(17px + (36 - 17) * ((100vw - 1000px) / (1122 - 1000))) 105px
+        &__desc
+            padding: 47px calc(23px + (57 - 23) * ((100vw - 1000px) / (1122 - 1000))) 60px calc(30px + (78 - 30) * ((100vw - 1000px) / (1122 - 1000)))
+
+@media screen and ( max-width: 999px )
+    .video
+        &__wrapper
+            flex-direction: column
+            max-width: 702px
+            padding: 5px 17px 105px
+        &__desc
+            max-width: 668px
+            padding: 42px
+            align-items: flex-start
+            height: 288px
+        &__title
+            flex-direction: row
+            align-items: center
+            text-align: start
+        &__cam
+            margin: 0 33px 0 0
+        &__pic > img
+            width: 100%
+
+@media screen and ( max-width: 439px )
+    .video
+        &__wrapper
+        &__desc
+            max-width: 260px
+            padding: 34px
+            height: auto
+        &__text
+            margin: 0 0 30px
+        &__cam
+            margin: 0 25px 0 0
+        &__title
+            max-width: 260px
+            padding: 26px
+            border: 1px solid #ececec
+            &_mob
+                display: flex
+            &_desctp
+                display: none
+    
 
 

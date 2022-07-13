@@ -153,19 +153,25 @@
         </section>
         <section class="video">
             <div class="video__wrapper">
-                <svg class="video__playbtn">
-
-                </svg>
+                <div class="video__title video__title_mob">
+                    <svg class="video__cam">
+                        <use xlink:href="src/sprite.svg#camera"></use>
+                    </svg>
+                    <h2 class="naming">Процесс производства</h2>
+                </div>
                 <picture class="video__pic">
                     <source type="image/webp" media="(min-width: 1000px)" srcset="src/pic/video_682.webp">
-                    <source type="image/webp" media="(min-width: 700px)" srcset="src/pic/video_525.webp">
-                    <source type="image/webp" media="(min-width: 300px)" srcset="src/pic/video_197.webp">
+                    <source type="image/webp" media="(min-width: 440px)" srcset="src/pic/video_525.webp">
+                    <source type="image/webp" media="(min-width: 100px)" srcset="src/pic/video_197.webp">
                     <img src="src/pic/video_682.png">
+                    <svg class="video__playbtn">
+                        <use xlink:href="src/sprite.svg#play-btn"></use>
+                    </svg>
                 </picture>
                 <div class="video__desc">
-                    <div class="video__title">
+                    <div class="video__title video__title_desctp">
                         <svg class="video__cam">
-
+                            <use xlink:href="src/sprite.svg#camera"></use>
                         </svg>
                         <h2 class="naming">Процесс производства</h2>
                     </div>
