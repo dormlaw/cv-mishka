@@ -24,6 +24,7 @@
         @include srv.fontsize(17,16,700)
         text-transform: uppercase
         color: #63d1bb
+        margin: 19px 0 0
     &__container
         max-width: 700px
         @include srv.flexbox(center, flex-start)
@@ -64,9 +65,9 @@
             content: ""
             display: block
             position: absolute
-            top: 0
             cursor: pointer
         &:checked + .form__label_radio::after
+            top: 0
             left: -42px
             transform: translate(-100%, -2px)
             width: 22px
@@ -74,7 +75,13 @@
             border-radius: 50%
             background-color: #62d1ba 
         &:checked + .form__label_checkbox::after
-
+            top: -12px
+            left: -61px
+            transform: rotate(45deg)
+            width: 16px
+            height: 32px
+            border: solid black 
+            border-width: 0 2px 2px 0
     &__text
         flex: 1 1 100%
         padding: 17px
