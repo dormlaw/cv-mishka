@@ -9,3 +9,8 @@
 
 //   @return calc(#{$base} + #{100vw * $slope});
 // }
+
+@mixin fontsize($fs, $lh: $fs, $fw: 400)
+        font-size: #{$fs}px
+        line-height: #{$lh}px
+        font-weight: $fw
