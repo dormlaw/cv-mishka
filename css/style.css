@@ -1479,7 +1479,7 @@ input, textarea {
   row-gap: 24px;
 }
 .form__container_wide {
-  grid-column: 2/span 2;
+  grid-column: 2/-1;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1496,7 +1496,7 @@ input, textarea {
           flex: 1 0 209px;
 }
 .form__container_col2 {
-  grid-column: 2/3;
+  grid-column: 2/span 1;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1640,6 +1640,18 @@ input, textarea {
   color: rgba(68, 68, 68, 0.3);
 }
 
+@media (max-width: 840px) {
+  .request {
+    padding: 68px 0 50px;
+  }
+  .form__wrapper {
+    padding: 0 50px;
+    grid-template-columns: 1fr 4fr;
+  }
+  .form__container_col2 {
+    grid-column: 1/-1;
+  }
+}
 .p-footer {
   padding: 51px 0 59px;
   background-color: #F9F9F9;

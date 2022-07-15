@@ -31,14 +31,14 @@
         flex-direction: column
         row-gap: 24px
         &_wide
-            grid-column: 2 / span 2
+            grid-column: 2 / -1
             flex-direction: row
             flex-wrap: wrap
             justify-content: flex-start
             & > .form__item
                 flex: 1 0 209px
         &_col2
-            grid-column: 2/3
+            grid-column: 2 / span 1
             flex-direction: row
             justify-content: space-between
             align-items: center
@@ -124,3 +124,20 @@
                 border-color: #62d1ba
         &::placeholder
             color: rgba(68, 68, 68, 0.3)
+@media ( max-width: 840px )
+    .request
+        padding: 68px 0 50px
+    .form
+        &__wrapper
+            padding: 0  50px
+            grid-template-columns: 1fr 4fr
+        &__container
+            &_col2
+                grid-column: 1 / -1
+
+@media ( max-width: 320px )
+    
+
+
+        
+    
