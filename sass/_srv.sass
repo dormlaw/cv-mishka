@@ -3,14 +3,10 @@
     justify-content: $just
     align-items: $aln
 
-// @function interpol($from, $to, $fromWidth, $toWidth) {
-//   $slope: ($to - $from) / ($toWidth - $fromWidth);
-//   $base: $from - $slope * $fromWidth;
-
-//   @return calc(#{$base} + #{100vw * $slope});
-// }
-
 @mixin fontsize($fs, $lh: $fs, $fw: 400)
         font-size: #{$fs}px
         line-height: #{$lh}px
         font-weight: $fw
+
+@function interpol($from, $to, $fromWidth, $toWidth)
+    @return calc( ( $to * 1px ) + ( $from - $to ) * ( ( 100vw - ( $toWidth * 1px ) ) / ( $fromWidth - $toWidth ) ) )
