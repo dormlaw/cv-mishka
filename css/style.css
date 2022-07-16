@@ -1661,6 +1661,9 @@ input, textarea {
   .form__section {
     padding: 33px 0 0;
   }
+  .form__section_gray {
+    background-color: transparent;
+  }
   .form__title {
     margin: 0 0 25px;
     display: -webkit-box;
@@ -1695,9 +1698,41 @@ input, textarea {
   .form__container {
     row-gap: 22px;
   }
+  .form__container_col2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .form__input-check {
+    width: 40px;
+    height: 40px;
+  }
   .form__label_checkbox::before, .form__label_radio::before {
     width: 40px;
     height: 40px;
+    top: 0;
+    left: -27px;
+    -webkit-transform: translate(-100%, -11px);
+        -ms-transform: translate(-100%, -11px);
+            transform: translate(-100%, -11px);
+  }
+  .form__label_radio::after {
+    -webkit-transform: translate(-75%, -2px);
+        -ms-transform: translate(-75%, -2px);
+            transform: translate(-75%, -2px);
+  }
+  .form__label_checkbox::after {
+    width: 12px;
+    height: 25px;
+    top: -6px;
+    left: -54px;
+  }
+  .form__text_textarea {
+    margin-bottom: 18px;
   }
 }
 .p-footer {

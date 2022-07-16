@@ -5,7 +5,7 @@
 
 .form
     &__wrapper
-        //внутренняя обертка каждого блока
+        //внутренняя обертка каждого блока на гридах
         max-width: 975px
         margin: 0 auto
         display: grid
@@ -13,16 +13,21 @@
         column-gap: 27px
         padding: 0  25px
     &__description
+        //текст
         margin-bottom: 12px
     &__section
+        //внешняя обертка каждого блока разных цветов
         padding: 50px 0
         &_gray
             background-color: #f1f1f1
+            //селектор, который выбирает только блоки одного типа идущие подряд, нетрогает одиночные
+            //уменьшает внутренний отступ между ними
             &:nth-last-of-type(-n+3):nth-last-of-type(odd)
                 padding-bottom: 12px
             &:nth-last-of-type(-n+3):nth-last-of-type(even)
                 padding-top: 12px
     &__title
+        
         @include srv.fontsize(17,16,700)
         text-transform: uppercase
         color: #63d1bb
@@ -145,6 +150,8 @@
     .form
         &__section
             padding: 33px 0 0
+            &_gray
+                background-color: transparent
         &__title
             margin: 0 0 25px
             @include srv.flexbox(center)
@@ -160,10 +167,34 @@
             column-gap: 22px
         &__container
             row-gap: 22px
+            &_col2
+                flex-direction: column-reverse
+                align-items: flex-start
+        &__input-check
+            width: 40px
+            height: 40px
         &__label
-            &_checkbox::before, &_radio::before
-                width: 40px
-                height: 40px
+            &_checkbox, &_radio
+                &::before
+                    width: 40px
+                    height: 40px
+                    top: 0
+                    left: -27px
+                    transform: translate(-100%, -11px)
+            &_radio
+                &::after
+                    transform: translate(-75%, -2px)
+            &_checkbox
+                &::after
+                    width: 12px
+                    height: 25px
+                    top: -6px
+                    left: -54px
+        &__item
+
+        &__text
+            &_textarea
+                margin-bottom: 18px
             
 
 
