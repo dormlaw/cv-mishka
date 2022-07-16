@@ -1664,6 +1664,12 @@ input, textarea {
   .form__section_gray {
     background-color: transparent;
   }
+  .form__section_gray:nth-last-of-type(-n+3):nth-last-of-type(odd), .form__section_gray:nth-last-of-type(-n+3):nth-last-of-type(even) {
+    padding: 33px 0 0;
+  }
+  .form__section_gray:nth-last-of-type(-n+3):nth-last-of-type(odd) .form__title, .form__section_gray:nth-last-of-type(-n+3):nth-last-of-type(even) .form__title {
+    margin-bottom: 0;
+  }
   .form__title {
     margin: 0 0 25px;
     display: -webkit-box;
@@ -1676,6 +1682,7 @@ input, textarea {
         -ms-flex-align: center;
             align-items: center;
     gap: 22px;
+    white-space: nowrap;
   }
   .form__title::after {
     content: "";
@@ -1684,6 +1691,7 @@ input, textarea {
     width: 100%;
   }
   .form__wrapper {
+    padding: 0 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1731,8 +1739,29 @@ input, textarea {
     top: -6px;
     left: -54px;
   }
+  .form__item_tel::after, .form__item_email::after {
+    right: 0;
+  }
+  .form__item_mob {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .form__text {
+    width: 100%;
+    padding: 17px 0;
+  }
   .form__text_textarea {
+    width: 100%;
+    padding: 17px;
     margin-bottom: 18px;
+  }
+  .form__button {
+    width: 100%;
   }
 }
 .p-footer {

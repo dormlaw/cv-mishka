@@ -27,7 +27,6 @@
             &:nth-last-of-type(-n+3):nth-last-of-type(even)
                 padding-top: 12px
     &__title
-        
         @include srv.fontsize(17,16,700)
         text-transform: uppercase
         color: #63d1bb
@@ -133,6 +132,7 @@
                 border-color: #62d1ba
         &::placeholder
             color: rgba(68, 68, 68, 0.3)
+
 @media ( max-width: 1000px )
     .request
         padding: 68px 0 50px
@@ -152,16 +152,22 @@
             padding: 33px 0 0
             &_gray
                 background-color: transparent
+                &:nth-last-of-type(-n+3):nth-last-of-type(odd), &:nth-last-of-type(-n+3):nth-last-of-type(even)
+                    padding: 33px 0 0
+                    & .form__title
+                        margin-bottom: 0
         &__title
             margin: 0 0 25px
             @include srv.flexbox(center)
             gap: 22px
+            white-space: nowrap
             &::after
                 content: ""
                 display: block
                 border-bottom: 1px solid #62d1ba
                 width: 100%
         &__wrapper
+            padding: 0 30px
             display: flex
             flex-direction: column
             column-gap: 22px
@@ -191,13 +197,18 @@
                     top: -6px
                     left: -54px
         &__item
-
+            &_tel, &_email
+                &::after
+                    right: 0
+            &_mob
+                flex-direction: column
+                align-items: flex-start
         &__text
+            width: 100%
+            padding: 17px 0
             &_textarea
+                width: 100%
+                padding: 17px
                 margin-bottom: 18px
-            
-
-
-
-        
-    
+        &__button
+            width: 100%
